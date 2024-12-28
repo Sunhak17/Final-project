@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kalnia";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(photo/login.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    background-color: #34362B;
+    top: 0;
+    left: 0;
+    width: 95em;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 5px 0 5px 0 white;
+}
+
+.header img {
+    height: 5em;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 1em;
+    height: 2em;
+    padding-right: 25em;
+    border-radius: 30px;
+}
+
+.search img {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#search {
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #34362B;
+    opacity: 0.5;
+}
+
+.choose .acc {
+    padding-bottom: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item>a {
+    color: #34362B;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-item>a:hover {
+    background-color: #34362B;
+}
+
+
+/* Dropdown styles */
+
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    /* Positioned below the parent */
+    left: 0;
+    background-color: #34362B;
+    padding: 0;
+    margin: 0;
+    display: none;
+    /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li {
+    font-weight: bold;
+    padding: 5px 5px;
+    width: 140px;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown a:hover {
+    opacity: 0.5;
+}
+
+
+/* Show dropdown on hover */
+
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    color: rgb(25, 25, 94);
+    margin-left: 100px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.choose a {
+    color: #F2EFEB;
+    text-decoration: none;
+    padding-top: 1em;
+    font-size: 15px;
+    cursor: pointer;
+    padding-right: 2em;
+}
+
+.choose a:hover {
+    opacity: 0.5;
+}
+
+.wrapper {
+    width: 420px;
+    margin-top: 5em;
+    background: #34362B;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper img {
+    width: 100px;
+    height: 50px;
+    margin-left: 7em;
+}
+
+.wrapper h1 {
+    font-size: 25px;
+    text-align: center;
+    color: #F2EFEB;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #F2EFEB;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #34362B;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #34362B;
+    opacity: 0.5;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    opacity: 0.5;
+    color: #34362B;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    margin-top: 2em;
+    background: #F2EFEB;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #F2EFEB;
+    font-weight: 600;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #34362B;
+}
+
+@media (max-width:1023px) {
+    .header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 5px;
+        width: 210vh;
+    }
+    .header img {
+        height: 3em;
+        /* Further reduce size */
+        margin-top: 1em;
+        margin-left: 50px;
+    }
+    .choose a {
+        padding-top: 30px;
+        padding-left: 50px;
+        font-size: 15px;
+        /* Smaller font size */
+    }
+    .choose .acc {
+        display: none;
+    }
+    .search {
+        display: none;
+    }
+    .menu {
+        flex-direction: column;
+        /* Stack menu vertically */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .menu-item {
+        margin-bottom: 5px;
+    }
+    .dropdown li {
+        width: 100%;
+        /* Full width dropdown */
+    }
+    .wrapper {
+        width: 450px;
+        height: 500px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 5px;
+        width: 210vh;
+        height: 80px;
+    }
+    .header img {
+        width: 100px;
+        height: 50px;
+        padding-bottom: 15px;
+        margin-left: 12em;
+    }
+    .choose a {
+        display: none;
+    }
+    .wrapper {
+        width: 300px;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    .wrapper img {
+        width: 100px;
+        height: 50px;
+        margin-left: 4em;
+    }
+    .wrapper h1 {
+        font-size: 15px;
+        text-align: center;
+        color: #F2EFEB;
+    }
+    .wrapper .input-box {
+        position: relative;
+        width: 100%;
+        height: 25px;
+        margin: 30px 0;
+    }
+    .input-box input {
+        width: 100%;
+        font-size: 10px;
+        padding: 15px 35px 15px 15px;
+    }
+    .input-box i {
+        transform: translateY(-30%);
+        font-size: 15px;
+    }
+    .remember-forgot {
+        font-size: small;
+    }
+    .remember-forgot label input {
+        accent-color: #fff;
+        margin-right: 2px;
+    }
+    .remember-forgot a {
+        font-size: small;
+    }
+    .btn {
+        width: 50%;
+        height: 25px;
+        margin-left: 50px;
+        font-size: 10px;
+    }
+    .wrapper .register-link {
+        font-size: 12px;
+        text-align: center;
+        margin: 20px 0 15px;
+    }
+    .register-link p a {
+        font-size: 12px;
+    }
+}
